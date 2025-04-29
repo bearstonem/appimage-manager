@@ -1,0 +1,11 @@
+[Unit]
+Description=Watch AppImages and Auto-update Launchers
+
+[Service]
+ExecStart=/usr/local/bin/linkbin_watcher.sh
+Restart=always
+RestartSec=2
+Environment=PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+[Install]
+WantedBy=default.target

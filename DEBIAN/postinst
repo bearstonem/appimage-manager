@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Make scripts executable
+chmod +x /usr/local/bin/linkbin.sh
+chmod +x /usr/local/bin/linkbin_watcher.sh
+
+# Reload user systemd
+loginctl enable-linger "$USER"
+systemctl --user daemon-reload
+systemctl --user enable linkbin.service
+systemctl --user enable linkbin-watcher.service
+systemctl --user start linkbin.service
+systemctl --user start linkbin-watcher.service
+
+echo "✅ AppImage Manager installed and activated."

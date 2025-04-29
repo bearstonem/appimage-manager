@@ -1,0 +1,10 @@
+Package: appimage-manager
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: bash, inotify-tools, libnotify-bin
+Maintainer: Berk Erkul
+Description: 
+ Fully automatic real-time AppImage CLI launcher manager for Ubuntu systems.
+ Adds/removes AppImage launchers, watches for changes, and provides desktop notifications.

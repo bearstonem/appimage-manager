@@ -1,0 +1,11 @@
+[Unit]
+Description=Update AppImage launchers
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/linkbin.sh
+WorkingDirectory=/usr/local/bin
+Environment=PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+[Install]
+WantedBy=default.target
